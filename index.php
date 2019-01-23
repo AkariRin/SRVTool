@@ -5,9 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>服务器解析生成工具</title>
 <link rel="stylesheet" href="static/css/layui.css">
-<script src="static/layui.js"></script>
+<script src="static/layui.all.js"></script>
 </head>
 <body>
+<div class="layui-row">
+<div class="layui-col-md6 layui-col-md-offset3">
+<div class="layui-card">
+  <div class="layui-card-body layui-bg-gray">
 <form class="layui-form layui-form-pane" action="backend.php" method="get">
 <div class="layui-form-item">
   <label class="layui-form-label">IP</label>
@@ -16,17 +20,23 @@
   </div>
 </div>
 <div class="layui-form-item">
-  <label class="layui-form-label">域名前缀</label>
+  <label class="layui-form-label">域名</label>
   <div class="layui-input-block">
-    <input type="text" name="domainprefix" required lay-verify="required" placeholder="请输入你的域名前缀(prefix.xxx.com)" autocomplete="off" class="layui-input">    
+    <input type="text" name="domainprefix" required lay-verify="required" placeholder="请输入你的域名(ssl.xxx.com)" autocomplete="off" class="layui-input">    
   </div>
 </div>
 <div class="layui-form-item">
   <label class="layui-form-label">使用SRV</label>
   <div class="layui-input-block">
-    <input type="checkbox" name="zzz" lay-skin="switch" lay-text="使用|不用">
+    
   </div>
 </div>
 </form>
+</div>
+</div>
+</div>
+<script>
+layui.use('form');
+</script>
 </body>
 </html>
