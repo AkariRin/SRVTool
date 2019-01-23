@@ -5,14 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>服务器解析生成工具</title>
 <link rel="stylesheet" href="static/css/layui.css">
-<script src="static/layui.all.js"></script>
 </head>
 <body>
 <div class="layui-row">
 <div class="layui-col-md6 layui-col-md-offset3">
 <div class="layui-card">
   <div class="layui-card-body layui-bg-gray">
-<form class="layui-form layui-form-pane" action="backend.php" method="get">
+<form class="layui-form" action="result.php" method="post">
 <div class="layui-form-item">
   <label class="layui-form-label">IP</label>
   <div class="layui-input-block">
@@ -28,15 +27,19 @@
 <div class="layui-form-item">
   <label class="layui-form-label">使用SRV</label>
   <div class="layui-input-block">
-    
+    <input type="checkbox" name="srv" lay-skin="switch" lay-text="开启|关闭">
   </div>
 </div>
+<div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
 </form>
 </div>
 </div>
 </div>
-<script>
-layui.use('form');
-</script>
+<script src="static/layui.all.js" charset="utf-8"></script>
 </body>
 </html>
