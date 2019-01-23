@@ -24,7 +24,7 @@
 <div class="layui-form-item">
   <label class="layui-form-label">使用SRV</label>
   <div class="layui-input-block">
-    原始表单元素区域
+    <input type="checkbox" name="zzz" lay-skin="switch" lay-text="使用|不用">
   </div>
 </div>
 </form>
