@@ -29,7 +29,7 @@
 <div class="layui-form-item">
   <label class="layui-form-label">域名</label>
   <div class="layui-input-block">
-    <input type="text" name="domain" required lay-verify="required" placeholder="请输入你的域名(ssl.xxx.com)" autocomplete="off" class="layui-input">    
+    <input type="text" name="domain" required lay-verify="required" placeholder="请输入你的域名，如(ssl.xxx.com)" autocomplete="off" class="layui-input">    
   </div>
 </div>
 <div class="layui-form-item">

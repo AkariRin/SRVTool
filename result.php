@@ -32,10 +32,14 @@ else{echo "AAAA";}
     </tr>
 <?php
 if($_POST["srv"]=="on")
-{echo "<tr>
+{
+$arrdomain=(explode(".",$_POST["domain"]));
+$count=count($arrdomain);
+echo "<tr>
       <td>许闲心</td>
       <td>SRV</td>
-      <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+      <td>5 0 ",$_POST["port"]," ","?","
+      </td>
     </tr>";}
 else{echo "";}
 ?>
