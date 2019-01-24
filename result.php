@@ -23,7 +23,11 @@
   <tbody>
     <tr>
       <td>@</td>
-      <td>A</td>
+      <td><?php
+if($_POST["iptype"]=="ipv4")
+{echo "A";}
+else{echo "AAAA";}
+?></td>
       <td><?php echo $_POST["ip"]; ?></td>
     </tr>
 <?php
