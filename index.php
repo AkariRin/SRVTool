@@ -52,10 +52,12 @@
   </div>
 </form></div></div></div>
 <div class="layui-row">
-<div class="layui-col-md3 layui-col-md-offset8">
-<button class="layui-btn layui-btn-warm"><a href="api.php?"><i class="layui-icon">&#xe64e;</i>API</a></button>
-<button class="layui-btn layui-btn-warm"><a href="https://dev.tencent.com/s/9366ba73-cbc4-475a-bf47-3269d02f0c5e"><i class="layui-icon">&#xe64c;</i>API文档</a></button>
-</div></div>
+<div class="layui-col-md3 layui-col-md-offset2">
+<div class="layui-card">
+<div class="layui-card-header">好玩的东西</div>
+<div class="layui-card-body">
+<button class="layui-btn layui-btn-warm"><a href="qcloud.php"><i class="layui-icon">&#xe609;</i>腾讯云自动生成</a></button>
+</div></div></div></div>
 <script src="static/layui.all.js" charset="utf-8"></script>
 </body>
 </html>
