@@ -24,7 +24,10 @@
     <tr>
       <td><?php
 $arr=explode('.',$_POST["domain"],-2);
-echo implode(".",$arr);
+$count=count($arr);
+if($count>0){
+echo implode(".",$arr);}
+else{echo "@";}
       ?></td>
       <td><?php
 if($_POST["iptype"]=="ipv4")
@@ -49,8 +52,6 @@ else{echo "";}
 <div class="layui-row">
 <div class="layui-col-md3 layui-col-md-offset8">
 <button class="layui-btn layui-btn-normal"><a href="index.php"><i class="layui-icon">&#xe65a;</i>返回</a></button>
-<button class="layui-btn layui-btn-warm"><a href="api.php?"><i class="layui-icon">&#xe64e;</i>API</a></button>
-<button class="layui-btn layui-btn-warm"><a href="https://dev.tencent.com/s/9366ba73-cbc4-475a-bf47-3269d02f0c5e"><i class="layui-icon">&#xe64c;</i>API文档</a></button>
 </div></div>
 <script src="static/layui.all.js" charset="utf-8"></script>
 </body>

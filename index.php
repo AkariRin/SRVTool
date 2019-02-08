@@ -33,6 +33,12 @@
   </div>
 </div>
 <div class="layui-form-item">
+  <label class="layui-form-label">端口号</label>
+  <div class="layui-input-block">
+    <input type="text" name="port" required lay-verify="required" placeholder="请输入端口号" autocomplete="off" class="layui-input">    
+  </div>
+</div>
+<div class="layui-form-item">
   <label class="layui-form-label">使用SRV</label>
   <div class="layui-input-block">
     <input type="checkbox" name="srv" lay-skin="switch" lay-text="开启|关闭">
@@ -44,10 +50,12 @@
       <button type="reset" class="layui-btn layui-btn-primary">重置</button>
     </div>
   </div>
-</form>
-</div>
-</div>
-</div>
+</form></div></div></div>
+<div class="layui-row">
+<div class="layui-col-md3 layui-col-md-offset8">
+<button class="layui-btn layui-btn-warm"><a href="api.php?"><i class="layui-icon">&#xe64e;</i>API</a></button>
+<button class="layui-btn layui-btn-warm"><a href="https://dev.tencent.com/s/9366ba73-cbc4-475a-bf47-3269d02f0c5e"><i class="layui-icon">&#xe64c;</i>API文档</a></button>
+</div></div>
 <script src="static/layui.all.js" charset="utf-8"></script>
 </body>
 </html>
