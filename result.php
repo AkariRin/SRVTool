@@ -22,7 +22,10 @@
   </thead>
   <tbody>
     <tr>
-      <td>@</td>
+      <td><?php
+$explode=explode(',',$_POST["domain"],0);
+echo $explode["0"]
+      ?></td>
       <td><?php
 if($_POST["iptype"]=="ipv4")
 {echo "A";}
@@ -33,18 +36,22 @@ else{echo "AAAA";}
 <?php
 if($_POST["srv"]=="on")
 {
-$arrdomain=(explode(".",$_POST["domain"]));
-$count=count($arrdomain);
 echo "<tr>
-      <td>许闲心</td>
+      <td>_minecraft._tcp</td>
       <td>SRV</td>
-      <td>5 0 ",$_POST["port"]," ","?","
+      <td>5 0 {$_POST['port']} {$_POST['domain']}
       </td>
     </tr>";}
 else{echo "";}
 ?>
   </tbody>
 </table>
+<div class="layui-row">
+<div class="layui-col-md3 layui-col-md-offset8">
+<button class="layui-btn layui-btn-normal"><a href="index.php"><i class="layui-icon">&#xe65a;</i>返回</a></button>
+<button class="layui-btn layui-btn-warm"><a href="api.php?"><i class="layui-icon">&#xe64e;</i>API</a></button>
+<button class="layui-btn layui-btn-warm"><a href="https://dev.tencent.com/s/9366ba73-cbc4-475a-bf47-3269d02f0c5e"><i class="layui-icon">&#xe64c;</i>API文档</a></button>
+</div></div>
 <script src="static/layui.all.js" charset="utf-8"></script>
 </body>
 </html>
