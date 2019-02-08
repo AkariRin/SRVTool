@@ -23,8 +23,8 @@
   <tbody>
     <tr>
       <td><?php
-$explode=explode(',',$_POST["domain"],0);
-echo $explode["0"]
+$arr=explode('.',$_POST["domain"],-2);
+echo implode(".",$arr);
       ?></td>
       <td><?php
 if($_POST["iptype"]=="ipv4")
