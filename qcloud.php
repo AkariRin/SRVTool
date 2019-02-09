@@ -11,7 +11,7 @@
 <div class="layui-col-md6 layui-col-md-offset3">
 <div class="layui-card">
   <div class="layui-card-body layui-bg-gray">
-<form class="layui-form" action="result.php" method="post">
+<form class="layui-form" action="qcloud.php" method="post">
 <div class="layui-form-item">
   <label class="layui-form-label">腾讯云SecretID</label>
   <div class="layui-input-block">
@@ -62,14 +62,32 @@
       <button type="reset" class="layui-btn layui-btn-primary">重置</button>
     </div>
   </div>
-</form></div></div></div>
+</form></div></div><div class="layui-col-md3 layui-col-md-offset8">
+<button class="layui-btn layui-btn-normal"><a href="index.php"><i class="layui-icon">&#xe65a;</i>返回</a></button></div></div>
 <div class="layui-row">
-<div class="layui-col-md3 layui-col-md-offset8">
-<button class="layui-btn layui-btn-normal"><a href="index.php"><i class="layui-icon">&#xe65a;</i>返回</a></button>
-</div></div>
+<div class="layui-col-md8 layui-col-md-offset2"><br>
+<div class="layui-card">
+<div class="layui-card-header layui-bg-green">输出日志</div>
+<div class="layui-card-body"><pre class="layui-bg-black">
+<p>页面初始化成功</p>
 <?php
-
-?>
+if($_POST['secretkey']!=NULL){
+echo "<p>开始运行请求······</p>";
+echo "<p>请求地址:cns.api.qcloud.com</p>";
+$conn = curl_init("cns.api.qcloud.com");
+curl_setopt($conn, CURLOPT_HEADER, 0);
+$data=array(
+    "Action"=>"RecordCreate",
+    "domain"=>""
+);
+curl_setopt($conn, CURLOPT_POST, 1);
+curl_setopt($conn, CURLOPT_CONNECTTIMEOUT, 60); 
+curl_setopt($conn, CURLOPT_POSTFIELDS , http_build_query($data));
+curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1); 
+$return = curl_exec($conn);
+curl_close($conn);
+}
+?></pre><br><br></div></div></div></div>
 <script src="static/layui.all.js" charset="utf-8"></script>
 </body>
 </html>

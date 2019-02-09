@@ -52,11 +52,12 @@
   </div>
 </form></div></div></div>
 <div class="layui-row">
-<div class="layui-col-md3 layui-col-md-offset2">
+<div class="layui-col-md3 layui-col-md-offset2"><br><br>
 <div class="layui-card">
-<div class="layui-card-header">好玩的东西</div>
+<div class="layui-card-header layui-bg-green">好玩的东西</div>
 <div class="layui-card-body">
-<button class="layui-btn layui-btn-warm"><a href="qcloud.php"><i class="layui-icon">&#xe609;</i>腾讯云自动生成</a></button>
+<button class="layui-btn layui-btn-normal"><a href="qcloud.php"><i class="layui-icon">&#xe609;</i>腾讯云自动生成</a></button><br><br>
+<button class="layui-btn layui-btn-disabled"><a href="aliyun.php"><i class="layui-icon">&#xe609;</i>阿里云自动生成</a></button>
 </div></div></div></div>
 <script src="static/layui.all.js" charset="utf-8"></script>
 </body>
